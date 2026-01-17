@@ -6,4 +6,9 @@
 
 *.key
 
-output.txt
+output.txt 
+node_modules/ 
+vscode/node_modules/ 
+ 
+vscode/out/ 
+bin/*.exe 
