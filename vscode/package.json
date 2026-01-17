@@ -1,0 +1,42 @@
+{
+  "name": "vibe-shield",
+  "displayName": "VibeShield - API Key Guardian",
+  "description": "Silent guardian for AI-generated code",
+  "version": "1.0.0",
+  "publisher": "your-publisher-name",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": ["Linters"],
+  "activationEvents": ["onStartupFinished"],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "vibeshield.scanFile",
+        "title": "VibeShield: Scan Current File"
+      }
+    ],
+    "configuration": {
+      "title": "VibeShield",
+      "properties": {
+        "vibeshield.scanOnSave": {
+          "type": "boolean",
+          "default": true
+        },
+        "vibeshield.entropyThreshold": {
+          "type": "number",
+          "default": 3.5
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@types/vscode": "^1.80.0",
+    "typescript": "^5.1.0"
+  }
+}
